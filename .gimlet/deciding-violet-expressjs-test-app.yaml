@@ -1,0 +1,16 @@
+app: expressjs-test-app
+env: deciding-violet
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.64.0
+values:
+  containerPort: 80
+  gitRepository: ademahmudf/expressjs-test-app
+  gitSha: '{{ .SHA }}'
+  image:
+    repository: nginx
+    tag: 1.19.3
+  imagePullSecrets: []
+  replicas: 1
